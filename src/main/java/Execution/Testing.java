@@ -28,6 +28,7 @@ public class Testing {
 		driver.get("https://chromedriver.chromium.org/downloads");
 		driver.manage().window().maximize();
 		List<WebElement> links = driver.findElements(By.tagName("a"));
+		System.out.println(links.get(1).toString());
 		driver.quit();
 		
 		
