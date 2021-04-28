@@ -30,8 +30,19 @@ public class Testing {
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		System.out.println(links.get(2).toString());
 		driver.quit();
-		
-		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.setProperty("webdriver.chrome.driver", ".//Drivers//chromedriver.exe");
+		 driver = new ChromeDriver();
+		driver.get("https://chromedriver.chromium.org/downloads");
+		driver.manage().window().maximize();
+		 links = driver.findElements(By.tagName("a"));
+		System.out.println(links.get(2).toString());
+		driver.quit();
 	
 	}
 }
